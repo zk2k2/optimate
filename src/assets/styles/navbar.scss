@@ -1,0 +1,36 @@
+.navbar {
+  .logo-enter {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  .logo-enter-active {
+    opacity: 1;
+    transform: translateX(0);
+    transition: opacity 1000ms ease-in-out, transform 1000ms ease-in-out;
+  }
+  .logo-exit {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  .logo-exit-active {
+    opacity: 0;
+    transform: translateX(-100%);
+    transition: opacity 1000ms ease-in-out, transform 1000ms ease-in-out;
+  }
+
+  .logo {
+    max-width: 17rem;
+  }
+
+  h4 {
+    opacity: 0;
+    animation: jump-in 1s ease-in-out;
+    animation-fill-mode: forwards;
+    animation-delay: 1s;
+    transition: color 0.2s ease-in-out;
+  }
+
+  h4:hover {
+    color: #81b1e2 !important;
+  }
+}

@@ -1,0 +1,42 @@
+.search-bar {
+  width: 19rem !important;
+  position: relative !important;
+  border: 1px solid #ccc;
+}
+.search-bar input[type=text] {
+  outline: none;
+  border: none;
+}
+.search-bar .to-do-container {
+  border-radius: 10;
+}
+.search-bar .form-control {
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+}
+.search-bar .search-icon {
+  right: 10px !important;
+}
+
+.clear-all:hover {
+  background-color: #df2e38 !important;
+}
+
+.add-objective:hover {
+  background-color: #003f6b !important;
+}
+
+.to-do-container {
+  height: 33rem !important;
+  overflow-y: scroll;
+}
+
+@media screen and (max-width: 1200px) {
+  .to-do-container {
+    width: 100%;
+  }
+  .search-bar {
+    max-width: 13rem;
+  }
+}/*# sourceMappingURL=objectives.css.map */

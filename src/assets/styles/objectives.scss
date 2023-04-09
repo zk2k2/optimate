@@ -1,0 +1,45 @@
+.search-bar {
+  width: 19rem !important;
+  position: relative !important;
+  border: 1px solid #ccc;
+  input[type="text"] {
+    outline: none;
+    border: none;
+  }
+
+  .to-do-container {
+    border-radius: 10;
+  }
+
+  .form-control {
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+  }
+
+  .search-icon {
+    right: 10px !important;
+  }
+}
+
+.clear-all:hover {
+  background-color: #df2e38 !important;
+}
+
+.add-objective:hover {
+  background-color: #003f6b !important;
+}
+
+.to-do-container {
+  height: 33rem !important;
+  overflow-y: scroll;
+}
+
+@media screen and (max-width: 1200px) {
+  .to-do-container {
+    width: 100%;
+  }
+  .search-bar {
+    max-width: 13rem;
+  }
+}

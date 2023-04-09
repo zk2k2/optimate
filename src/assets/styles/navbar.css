@@ -1,0 +1,31 @@
+.navbar .logo-enter {
+  opacity: 0;
+  transform: translateX(-100%);
+}
+.navbar .logo-enter-active {
+  opacity: 1;
+  transform: translateX(0);
+  transition: opacity 1000ms ease-in-out, transform 1000ms ease-in-out;
+}
+.navbar .logo-exit {
+  opacity: 1;
+  transform: translateX(0);
+}
+.navbar .logo-exit-active {
+  opacity: 0;
+  transform: translateX(-100%);
+  transition: opacity 1000ms ease-in-out, transform 1000ms ease-in-out;
+}
+.navbar .logo {
+  max-width: 17rem;
+}
+.navbar h4 {
+  opacity: 0;
+  animation: jump-in 1s ease-in-out;
+  animation-fill-mode: forwards;
+  animation-delay: 1s;
+  transition: color 0.2s ease-in-out;
+}
+.navbar h4:hover {
+  color: #81b1e2 !important;
+}/*# sourceMappingURL=navbar.css.map */

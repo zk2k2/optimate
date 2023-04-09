@@ -1,0 +1,13 @@
+.text-container {
+  opacity: 0;
+  animation: fade-in 1000ms;
+  animation-delay: 1000ms;
+  animation-fill-mode: forwards;
+}
+
+.animation-container {
+  opacity: 0;
+  animation: fade-in 1000ms;
+  animation-delay: 1000ms;
+  animation-fill-mode: forwards;
+}

@@ -1,0 +1,45 @@
+$theme-colors: (
+  "primary": #003f6b,
+  "secondary": #0d86cb,
+  "tertiary": #81b1e2,
+  "quaternary": #dddddd,
+  "low": #03c988,
+  "medium": #f7c04a,
+  "high": #ff6000,
+  "critical": #df2e38,
+);
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes jump-in {
+  0% {
+    opacity: 0;
+    transform: translateY(50%);
+  }
+  50% {
+    opacity: 0.5;
+    transform: translateY(-10%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@import "../../../node_modules/bootstrap/scss/bootstrap.scss";

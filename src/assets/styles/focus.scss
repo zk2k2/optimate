@@ -1,0 +1,24 @@
+.focus {
+  .timer {
+    opacity: 0;
+    animation: fade-in 1s ease-in-out;
+    animation-fill-mode: forwards;
+    transition: color 0.2s ease-in-out;
+  }
+
+  .clock h1 {
+    font-size: 10rem;
+  }
+  .time-input input {
+    text-align: center;
+
+    font-size: 2rem;
+    width: 10%;
+  }
+  .form-group h1 {
+    display: block !important;
+  }
+  .select-timer-text {
+    animation: fade 2s infinite;
+  }
+}
