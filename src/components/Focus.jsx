@@ -24,7 +24,7 @@ const Focus = () => {
   document.addEventListener("visibilitychange", function () {
     if (document.visibilityState === "hidden") {
       showModal();
-      showModal = true;
+      setShowModal(true);
     }
   });
 
