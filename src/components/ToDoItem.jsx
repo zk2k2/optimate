@@ -21,26 +21,27 @@ const ToDoItem = ({
   description,
   itemId,
 }) => {
-  const [todos, setTodos] = useState([]);
-  useEffect(() => {
-    const savedTodos = localStorage.getItem("todos");
-    if (savedTodos) {
-      setTodos(JSON.parse(savedTodos));
-    }
-  }, []);
-  useEffect(() => {
-    localStorage.setItem("todos", JSON.stringify(todos));
-  }, [todos]);
-
-  const removeObjective = (itemId) => {
-    const newTodos = todos.filter((todo) => todo.id !== itemId);
-    setTodos(...newTodos);
-  };
-
   let durationColor = "";
   let priorityColor = "";
   let difficultyColor = "";
-  let dueDateColor = "";
+
+  const [dueDateColor, setDueDateColor] = useState("");
+
+  useEffect(() => {
+    const now = new Date();
+    const dueDateObj = new Date(dueDate);
+    const diff = dueDateObj.getTime() - now.getTime();
+    const diffDays = Math.ceil(diff / (1000 * 3600 * 24));
+    if (diffDays < 0) {
+      setDueDateColor("critical");
+    } else if (diffDays < 3) {
+      setDueDateColor("high");
+    } else if (diffDays < 7) {
+      setDueDateColor("medium");
+    } else {
+      setDueDateColor("low");
+    }
+  }, dueDate);
 
   if (
     duration === "<15 minutes" ||
@@ -72,19 +73,6 @@ const ToDoItem = ({
     difficultyColor = "medium";
   } else if (difficulty === "Hard") {
     difficultyColor = "high";
-  }
-  const now = new Date();
-  const dueDateObj = new Date(dueDate);
-  const diff = dueDateObj.getTime() - now.getTime();
-  const diffDays = Math.ceil(diff / (1000 * 3600 * 24));
-  if (diffDays < 0) {
-    dueDateColor = "critical";
-  } else if (diffDays < 3) {
-    dueDateColor = "high";
-  } else if (diffDays < 7) {
-    dueDateColor = "medium";
-  } else {
-    dueDateColor = "low";
   }
 
   return (
