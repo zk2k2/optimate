@@ -36,15 +36,15 @@ const WebsiteNavbar = () => {
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="ms-auto">
             <Nav.Item className="mx-5">
-              <Link to="/daily-planner" style={{ textDecoration: "none" }}>
+              <Link to="/chat" style={{ textDecoration: "none" }}>
                 <h4
                   className={
-                    isActivePage("/daily-planner")
+                    isActivePage("/chat")
                       ? "fw-bold text-secondary"
                       : "fw-bold text-primary"
                   }
                 >
-                  Daily Planner
+                  Optibot
                 </h4>
               </Link>
             </Nav.Item>

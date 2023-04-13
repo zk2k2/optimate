@@ -11,6 +11,7 @@ import "bootstrap/dist/js/bootstrap.min.js";
 // components
 import Objectives from "./components/Objectives";
 import Home from "./components/Home";
+import Chat from "./components/Chat";
 import WebsiteNavbar from "./components/WebsiteNavbar";
 import Footer from "./components/Footer";
 import Focus from "./components/Focus";
@@ -24,6 +25,7 @@ const App = () => {
           <Route path="/" element={<Home />} />
           <Route path="objectives" element={<Objectives />} />
           <Route path="focus" element={<Focus />}></Route>
+          <Route path="chat" element={<Chat />}></Route>
         </Routes>
         <Footer></Footer>
       </Router>

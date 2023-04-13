@@ -1,0 +1,10 @@
+.optibot .chatbox {
+  min-height: 35vw;
+}
+.optibot .questions {
+  flex-wrap: wrap;
+}
+
+.answer-animation {
+  animation: fade-in 0.5s ease-in-out;
+}/*# sourceMappingURL=chat.css.map */
