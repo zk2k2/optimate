@@ -1,3 +1,7 @@
+.objectives {
+  overflow-x: hidden;
+}
+
 .search-bar {
   width: 19rem !important;
   position: relative !important;
@@ -37,6 +41,12 @@
 }
 
 @media screen and (max-width: 1200px) {
+  .objectives {
+    overflow-x: hidden;
+  }
+  .to-do-container {
+    overflow-x: hidden;
+  }
   .to-do-container {
     width: 100%;
   }

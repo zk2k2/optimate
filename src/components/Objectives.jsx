@@ -14,6 +14,7 @@ import ToDoItem from "./ToDoItem";
 import { Modal } from "react-bootstrap";
 
 const Objectives = () => {
+  console.log(localStorage.getItem("doneObjectives"));
   const options = {
     month: "short",
     day: "numeric",
@@ -86,6 +87,7 @@ const Objectives = () => {
     useEffect(() => {
       inputRef.current.focus();
     }, []);
+
     return (
       <div className="search-bar position-relative">
         <Form.Control
@@ -163,7 +165,9 @@ const Objectives = () => {
       priority: form.priority.value,
       difficulty: form.difficulty.value,
       description: form.description.value,
-      itemId: Math.random(),
+      itemId:
+        String.fromCharCode(97 + Math.floor(Math.random() * 26)) +
+        Math.floor(Math.random() * 100),
     };
     setTodos((prevTodos) => [...prevTodos, newTodo]);
     setTodo({});

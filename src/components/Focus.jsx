@@ -39,10 +39,21 @@ const Focus = () => {
   const handleShow = () => setShowModal(true);
   const handleSubmit = (e) => {
     e.preventDefault();
+
+    const timeSpent = parseInt(localStorage.getItem("timeSpent")) || 0; // get the previous time spent or set it to 0
+
     const intervalId = setInterval(() => {
       setPhrase(catchphrases[Math.floor(Math.random() * catchphrases.length)]);
     }, 5000);
+
     setSeconds(hours * 3600 + minutes * 60);
+    localStorage.setItem(
+      "timeSpent",
+      (timeSpent + hours * 3600 + minutes * 60).toString()
+    ); // save the updated time spent
+    console.log(secondsRemaining);
+    console.log(localStorage.getItem("timeSpent"));
+
     setTimeout(() => {
       setShowModal(true);
       timeInput.classList.remove("d-none");
@@ -53,8 +64,6 @@ const Focus = () => {
     timeInput.classList.add("d-none");
     beginFocus.classList.add("d-none");
     setPhrase(catchphrases[Math.floor(Math.random() * catchphrases.length)]);
-
-    console.log(secondsRemaining);
   };
 
   function formatInput(input) {

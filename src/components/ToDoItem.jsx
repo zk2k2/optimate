@@ -41,7 +41,7 @@ const ToDoItem = ({
     } else {
       setDueDateColor("low");
     }
-  }, dueDate);
+  }, [dueDate]);
 
   if (
     duration === "<15 minutes" ||
@@ -75,14 +75,32 @@ const ToDoItem = ({
     difficultyColor = "high";
   }
 
+  const removeObjective = (id, type) => {
+    var doneObjectives = parseInt(localStorage.getItem("doneObjectives") || 0);
+    if (type === "done") {
+      doneObjectives++;
+      localStorage.setItem("doneObjectives", doneObjectives.toString());
+    }
+    document.querySelector(`.${id}`).remove();
+    localStorage.getItem("todos");
+    let todos = JSON.parse(localStorage.getItem("todos"));
+    todos = todos.filter((todo) => todo.itemId !== id);
+    localStorage.setItem("todos", JSON.stringify(todos));
+  };
+
   return (
-    <div className={`to-do-item border border-black rounded  m-3`}>
+    <div className={`to-do-item border ${itemId} border-black rounded  m-3`}>
       <div className="objective-header d-flex justify-content-between m-2">
         <div className="title ">
           <h4 className="text-secondary">{title}</h4>
         </div>
         <div className="do-undo">
-          <Button variant="bg-white">
+          <Button
+            variant="bg-white"
+            onClick={() => {
+              removeObjective(itemId, "done");
+            }}
+          >
             <FontAwesomeIcon
               icon={faCheck}
               size="xl"
@@ -92,8 +110,7 @@ const ToDoItem = ({
           <Button
             variant="bg-white"
             onClick={() => {
-              console.log("Hi");
-              removeObjective(itemId);
+              removeObjective(itemId, "undo");
             }}
           >
             <FontAwesomeIcon
