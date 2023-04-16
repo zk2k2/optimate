@@ -4,19 +4,18 @@ import { useState, useRef } from "react";
 import { Link, useLocation } from "react-router-dom";
 import "../assets/styles/navbar.css";
 import "../assets/styles/main.css";
+import logo from "../assets/img/logo.png";
 
 const WebsiteNavbar = () => {
-  const [show, setShow] = useState(false);
-  const nodeRef = useRef(null);
   const location = useLocation();
   const isActivePage = (pathname) => location.pathname === pathname;
 
   return (
     <Navbar bg="white" expand="lg" className="navbar">
       <Container>
-        <Navbar.Brand ref={nodeRef}>
+        <Navbar.Brand>
           <Link to="/">
-            <img className="logo" src="../assets/img/logo.png" alt="logo" />
+            <img className="logo" src={logo} alt="logo" />
           </Link>
         </Navbar.Brand>
 

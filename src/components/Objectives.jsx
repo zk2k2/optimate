@@ -12,7 +12,7 @@ import { Button } from "react-bootstrap";
 import "../assets/styles/objectives.css";
 import ToDoItem from "./ToDoItem";
 import { Modal } from "react-bootstrap";
-
+import objectivesAnimation from "../assets/img/objectives-animation.gif";
 const Objectives = () => {
   console.log(localStorage.getItem("doneObjectives"));
   const options = {
@@ -179,7 +179,7 @@ const Objectives = () => {
       <div className="page-container row">
         <div className="animation-container col-xl-4 mx-5 d-none d-xl-block">
           <img
-            src="../assets/img/objectives-animation.gif"
+            src={objectivesAnimation}
             className="img-fluid float w-100"
             alt=""
           />

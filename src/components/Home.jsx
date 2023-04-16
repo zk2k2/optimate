@@ -1,6 +1,7 @@
 import { Container } from "react-bootstrap";
 import "../assets/styles/main.css";
 import "../assets/styles/home.css";
+import homeGif from "../assets/img/home-gif-alt.gif";
 
 const Home = () => {
   return (
@@ -17,11 +18,7 @@ const Home = () => {
         </Container>
 
         <Container className="my-5 animation-container animation col-md-8">
-          <img
-            src="../assets/img/home-gif-alt.gif"
-            alt=""
-            className="animation img-fluid float"
-          />
+          <img src={homeGif} alt="" className="animation img-fluid float" />
         </Container>
       </Container>
     </Container>
