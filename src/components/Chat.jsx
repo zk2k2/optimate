@@ -172,8 +172,10 @@ const Chat = () => {
         break;
 
       case "stats":
-        const doneObjectives = parseInt(localStorage.getItem("doneObjectives"));
-        const timeSpent = parseInt(localStorage.getItem("timeSpent"));
+        const doneObjectives = parseInt(
+          localStorage.getItem("doneObjectives") || 0
+        );
+        const timeSpent = parseInt(localStorage.getItem("timeSpent") || 0);
         const hours = Math.floor(timeSpent / 3600);
         const minutes = Math.floor((timeSpent % 3600) / 60);
         const seconds = timeSpent % 60;
