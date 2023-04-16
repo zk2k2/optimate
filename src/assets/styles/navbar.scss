@@ -3,23 +3,27 @@
     opacity: 0;
     transform: translateX(-100%);
   }
-  .logo-enter-active {
-    opacity: 1;
-    transform: translateX(0);
-    transition: opacity 1000ms ease-in-out, transform 1000ms ease-in-out;
-  }
-  .logo-exit {
-    opacity: 1;
-    transform: translateX(0);
-  }
-  .logo-exit-active {
-    opacity: 0;
-    transform: translateX(-100%);
-    transition: opacity 1000ms ease-in-out, transform 1000ms ease-in-out;
+
+  @keyframes slide-in {
+    0% {
+      opacity: 0;
+      transform: translateX(-100%);
+    }
+    50% {
+      opacity: 0.5;
+      transform: translateX(0);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }
   }
 
   .logo {
     max-width: 17rem;
+    opacity: 0;
+    transform: translateX(-100%);
+    animation: slide-in 1.5s ease-in-out forwards;
   }
 
   h4 {

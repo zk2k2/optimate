@@ -14,23 +14,12 @@ const WebsiteNavbar = () => {
   return (
     <Navbar bg="white" expand="lg" className="navbar">
       <Container>
-        <CSSTransition
-          nodeRef={nodeRef}
-          in={show}
-          timeout={1000}
-          classNames="logo"
-        >
-          <Navbar.Brand ref={nodeRef}>
-            <Link to="/">
-              <img
-                className="logo"
-                onLoad={() => setShow(true)}
-                src="../assets/img/logo.png"
-                alt="logo"
-              />
-            </Link>
-          </Navbar.Brand>
-        </CSSTransition>
+        <Navbar.Brand ref={nodeRef}>
+          <Link to="/">
+            <img className="logo" src="../assets/img/logo.png" alt="logo" />
+          </Link>
+        </Navbar.Brand>
+
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
 
         <Navbar.Collapse id="responsive-navbar-nav">
