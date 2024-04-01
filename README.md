@@ -14,10 +14,3 @@ Welcome to Optimate! This application was developed in March-April 2023 to learn
 ### Focus Timer
 - Utilize a focus timer to enhance productivity and maintain focus during work sessions.
 
-## Installation
-
-To install and run Optimate locally, follow these steps:
-
-1. Clone this repository to your local machine.
-2. Navigate to the project directory.
-3. Install dependencies by running the following command:
