@@ -7,7 +7,9 @@ pipeline {
             }
         }
         stage('Test') { 
-            //no tests so far
+          steps{
+            sh 'npm test'
+          }
         }
         stage('Deploy to Vercel'){
           steps{
