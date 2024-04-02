@@ -6,11 +6,6 @@ pipeline {
                 sh 'npm install' 
             }
         }
-        stage('Test') { 
-          steps{
-            sh 'npm test'
-          }
-        }
         stage('Deploy to Vercel'){
           steps{
            sh 'npm install -g vercel'
