@@ -7,4 +7,7 @@ pipeline {
             }
         }
     }
+    tools{
+        nodejs '21.7.1'
+    }
 }
