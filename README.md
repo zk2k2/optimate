@@ -1,6 +1,6 @@
 # Optimate
 
-Welcome to Optimate! This application was developed in March-April 2023 to learn React and is now being utilized for exploring CI/CD and DevOps with Jenkins. This README provides an overview of the application's features, installation instructions, and usage guidelines.
+Welcome to Optimate! This application was developed in March-April 2023 to learn React and is now being utilized for exploring CI/CD and DevOps with Jenkins. This README provides an overview of the application's features and usage guidelines.
 
 ## Features
 
