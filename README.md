@@ -1,6 +1,4 @@
 # Optimate ⚡
-![image](https://github.com/zk2k2/optimate/assets/98645757/6d6f9557-da37-4c2c-98e9-04b229961771)
-
 
 Welcome to Optimate! This application was developed in March-April 2023 to learn React and is now being utilized for exploring CI/CD and DevOps with Jenkins. This README provides an overview of the application's features and usage guidelines.
 
